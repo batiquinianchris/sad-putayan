@@ -1,0 +1,11 @@
+<h1>Fees and Accounts</h1>
+<ul>
+    {% for fa in fees_accounts %}
+    <li>{{ fa.amount }}  :
+    <a href="{% url 'edit' fa.id %}">{{ fa.FA_name }}</a>
+    <a href="{% url  'delete' fa.id %}">delete</a>
+    </li>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'create' %}">New</a>
